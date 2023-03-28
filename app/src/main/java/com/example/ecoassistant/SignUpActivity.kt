@@ -17,9 +17,6 @@ class SignUpActivity : AppCompatActivity(){
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding = ActivitySignUpBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
         firebaseAuth = FirebaseAuth.getInstance()
 
         binding.MainButton.setOnClickListener {
@@ -34,7 +31,7 @@ class SignUpActivity : AppCompatActivity(){
                             val intent = Intent(this, SignInActivity::class.java)
                             startActivity(intent)
                         } else {
-                            Toast.makeText(this, it.exception.toString(), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this, "Nepareizs e-pasts vai parole!", Toast.LENGTH_SHORT).show()
                         }
                     }
                 } else {
