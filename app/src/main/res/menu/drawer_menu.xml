@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_guide"
+            android:icon="@drawable/book"
+            android:title="Kā šķirot?" />
+
+        <item
+            android:id="@+id/nav_map"
+            android:icon="@drawable/map"
+            android:title="Karte" />
+
+        <item
+            android:id="@+id/nav_scanner"
+            android:icon="@drawable/scanner"
+            android:title="Skeneris" />
+    </group>
+
+    <item android:title="Izeja">
+        <menu>
+            <item
+                android:id="@+id/nav_sign_out"
+                android:icon="@drawable/sign_out"
+                android:title="Izrakstīties" />
+        </menu>
+    </item>
+</menu>
