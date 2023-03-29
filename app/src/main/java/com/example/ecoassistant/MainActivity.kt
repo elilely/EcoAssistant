@@ -1,20 +1,21 @@
 package com.example.ecoassistant
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
-import com.example.ecoassistant.databinding.ActivityMainBinding
+//import com.example.ecoassistant.databinding.ActivityMainBinding
+import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
-    private lateinit var binding: ActivityMainBinding
-    private lateinit var firebaseAuth: FirebaseAuth
+    //private lateinit var binding: ActivityMainBinding
     private lateinit var drawer: DrawerLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,21 +31,17 @@ class MainActivity : AppCompatActivity() {
             this, drawer, toolbar,
             R.string.navigation_drawer_open, R.string.navigation_drawer_close
         )
+
         drawer.addDrawerListener(toggle)
         toggle.syncState()
 
-/*binding = ActivityMainBinding.inflate(layoutInflater)
-setContentView(binding.root)
+        val navigationView: NavigationView = findViewById(R.id.nav_view)
+        navigationView.setNavigationItemSelectedListener(this)
 
-firebaseAuth = FirebaseAuth.getInstance()
-binding.signOutButton.setOnClickListener {
-    firebaseAuth.signOut()
-    val intent = Intent(this, StartActivity::class.java)
-    startActivity(intent)
-}*/
-
-/*supportActionBar?.setDefaultDisplayHomeAsUpEnabled(true)
-supportActionBar?.title = "Eco Asistents"*/
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction().replace(R.id.fragment_container, GuideFragment()).commit()
+            navigationView.setCheckedItem(R.id.nav_guide)
+        }
     }
 
     override fun onBackPressed() {
@@ -53,6 +50,20 @@ supportActionBar?.title = "Eco Asistents"*/
         } else{
             super.onBackPressed()
         }
+    }
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.nav_guide -> supportFragmentManager.beginTransaction().replace(R.id.fragment_container, GuideFragment()).commit()
+            R.id.nav_map -> supportFragmentManager.beginTransaction().replace(R.id.fragment_container, MapFragment()).commit()
+            R.id.nav_scanner -> supportFragmentManager.beginTransaction().replace(R.id.fragment_container, ScannerFragment()).commit()
+            R.id.nav_sign_out -> {
+                FirebaseAuth.getInstance().signOut()
+                startActivity(Intent(applicationContext, StartActivity::class.java))
+                finish()}
+        }
+        drawer.closeDrawer(GravityCompat.START)
+        return true
     }
 
 }
