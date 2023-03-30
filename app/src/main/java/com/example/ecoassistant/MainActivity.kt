@@ -21,6 +21,8 @@ class MainActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //NAVIGATION DRAWER
+
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
@@ -56,6 +58,7 @@ class MainActivity : AppCompatActivity(){
         }
     }
 
+    //To close the Navigation drawer not the entire App
     override fun onBackPressed() {
         if(drawer.isDrawerOpen(GravityCompat.START)){
             drawer.closeDrawer(GravityCompat.START)
