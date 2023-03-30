@@ -3,4 +3,13 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="plastic">Plastmasa</string>
+    <string name="paper">Papīrs</string>
+    <string name="metal">Metāls</string>
+    <string name="glass">Stikls</string>
+    <string name="bio">BIO atkritumi</string>
+    <string name="textile">Tekstils</string>
+
+
 </resources>
