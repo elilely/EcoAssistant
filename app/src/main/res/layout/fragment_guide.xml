@@ -20,7 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_centerVertical="true"
-                android:fontFamily="@font/noto_sans"
+                android:fontFamily="@font/quicksand_medium"
                 android:padding="10dp"
                 android:text="Izvēlies materiālu!"
                 android:textAlignment="textStart"
@@ -55,11 +55,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:fontFamily="@font/acme"
-                    android:padding="25dp"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:padding="20dp"
                     android:text="@string/plastic"
                     android:textColor="#363337"
-                    android:textSize="40sp" />
+                    android:textSize="40sp"/>
 
                 <Button
                     android:id="@+id/yellow_button"
@@ -68,7 +68,8 @@
                     android:background="#00000000"
                     android:padding="20dp"
                     android:text="p"
-                    android:textColor="#FEDD2C"/>
+                    android:textColor="#FEDD2C"
+                    android:textAlignment="textEnd"/>
 
             </RelativeLayout>
 
@@ -101,7 +102,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:fontFamily="@font/acme"
+                    android:fontFamily="@font/quicksand_medium"
                     android:padding="40dp"
                     android:text="@string/glass"
                     android:textColor="@color/white"
@@ -114,7 +115,8 @@
                     android:background="#00000000"
                     android:padding="20dp"
                     android:text="s"
-                    android:textColor="#00AB08" />
+                    android:textColor="#00AB08"
+                    android:textAlignment="textEnd"/>
 
             </RelativeLayout>
 
@@ -146,7 +148,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
-                    android:fontFamily="@font/acme"
+                    android:fontFamily="@font/quicksand_medium"
                     android:padding="40dp"
                     android:text="@string/paper"
                     android:textColor="@color/white"
@@ -159,7 +161,8 @@
                     android:background="#00000000"
                     android:padding="20dp"
                     android:text="pa"
-                    android:textColor="#5360BE" />
+                    android:textColor="#5360BE"
+                    android:textAlignment="textEnd"/>
 
             </RelativeLayout>
 
@@ -191,7 +194,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:fontFamily="@font/acme"
+                    android:fontFamily="@font/quicksand_medium"
                     android:padding="40dp"
                     android:text="@string/metal"
                     android:textColor="@color/white"
@@ -204,7 +207,8 @@
                     android:background="#00000000"
                     android:padding="20dp"
                     android:text="m"
-                    android:textColor="#363337" />
+                    android:textColor="#363337"
+                    android:textAlignment="textEnd"/>
 
             </RelativeLayout>
 
@@ -236,7 +240,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
-                    android:fontFamily="@font/acme"
+                    android:fontFamily="@font/quicksand_medium"
                     android:padding="40dp"
                     android:text="@string/bio"
                     android:textColor="@color/white"
@@ -282,7 +286,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:fontFamily="@font/acme"
+                    android:fontFamily="@font/quicksand_medium"
                     android:padding="40dp"
                     android:text="@string/textile"
                     android:textColor="@color/white"
@@ -295,7 +299,8 @@
                     android:background="#00000000"
                     android:padding="20dp"
                     android:text="r"
-                    android:textColor="#DA0200" />
+                    android:textColor="#DA0200"
+                    android:textAlignment="textEnd"/>
 
             </RelativeLayout>
 
