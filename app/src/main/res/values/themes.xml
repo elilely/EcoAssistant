@@ -13,4 +13,63 @@
         <item name="android:statusBarColor">?attr/colorPrimary</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextInputOuterFieldStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+    </style>
+
+    <style name="TextInputInnerFieldStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/dark_grey</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="roundedImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="ToolbarTitle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/quicksand_medium</item>
+    </style>
+
+    <style name="ShowRulesTitles">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">@font/quicksand_medium</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_alignParentEnd">true</item>
+    </style>
+
+    <style name="ShowRulesText">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/quicksand_medium</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_alignParentEnd">true</item>
+    </style>
+
 </resources>

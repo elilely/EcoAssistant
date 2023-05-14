@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "455079341376",
+    "firebase_url": "https://ecoassistant-em-default-rtdb.europe-west1.firebasedatabase.app",
     "project_id": "ecoassistant-em",
     "storage_bucket": "ecoassistant-em.appspot.com"
   },

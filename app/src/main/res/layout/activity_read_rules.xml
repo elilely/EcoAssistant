@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReadRulesActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarRR_LZP"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/leaf"
+        android:elevation="4dp"
+        android:fontFamily="@font/quicksand_medium"
+        android:theme="@style/AppTheme"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:divider="@color/leaf"
+        android:dividerHeight="2dp"
+        android:fontFamily="@font/quicksand_medium"
+        android:paddingTop="20dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarRR_LZP" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="12dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="8dp">
+       <!-- android:background="@drawable/round_yellow" -->
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/sivImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/plastic_water"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/roundedImageView" />
+
+
+        <TextView
+            android:id="@+id/materialTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/quicksand_medium"
+            android:gravity="center"
+            android:text="@string/plastic"
+            android:textAlignment="center"
+            android:textColor="@color/purple_300"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/sivImage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <!-- <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:cardCornerRadius="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="24dp"
+            android:src="@drawable/plastic_bottle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.cardview.widget.CardView> -->
+
+
+        <!-- <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:id="@+id/color"
+                android:layout_width="match_parent"
+                android:layout_height="155dp"
+                android:layout_margin="20dp"
+                android:background="@drawable/round_yellow">
+
+                <TextView
+                    android:id="@+id/material"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/quicksand_medium"
+                    android:padding="20dp"
+                    android:text="@string/plastic"
+                    android:textColor="#363337"
+                    android:textSize="40sp" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="160dp"
+                android:layout_height="147dp"
+                android:layout_alignTop="@+id/color"
+                android:layout_alignBottom="@+id/color"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="-20dp"
+                android:contentDescription="@string/desc"
+                android:src="@drawable/plastic_bottle"
+                tools:ignore="NotSibling" />
+        </RelativeLayout> -->
+
+
+        <!-- <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/title"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </com.google.android.material.imageview.ShapeableImageView>
+    -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

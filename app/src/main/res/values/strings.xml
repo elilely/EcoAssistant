@@ -2,8 +2,32 @@
     <string name="app_name">EcoAssistant</string>
     <string name="app_name_lv">Eco Asistents</string>
 
+    <string name="sign_in">Pierakstieties</string>
+    <string name="sign_up">Reģistrēties</string>
+    <string name="sign_out">Izrakstīties</string>
+
+    <string name="auth">Autorizācija</string>
+    <string name="regis">Reģistrācija</string>
+    <string name="SignUpView">Jums vēl nav konta, reģistrējieties!</string>
+
+    <string name="your_email">Jūsu e-pasts</string>
+    <string name="your_password">Jūsu parole</string>
+    <string name="confirm_your_password">Atkārtojiet paroli</string>
+
+    <string name="auth_lowerCase">autorizācija</string>
+    <string name="regis_lowerCase">reģistrācija</string>
+
+    <string name="desc">Image</string>
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="nav_guide">Kā šķirot?</string>
+    <string name="nav_map">Karte</string>
+    <string name="nav_scanner">Skeneris</string>
+    <string name="nav_account">Konts</string>
+    <string name="talkas">Talkas</string>
+
 
     <string name="plastic">Plastmasa</string>
     <string name="paper">Papīrs</string>
@@ -12,5 +36,22 @@
     <string name="bio">BIO atkritumi</string>
     <string name="textile">Tekstils</string>
 
+    <string name="empty_button">.</string>
+    <string name="choose_the_material">Izvēlies materiālu!</string>
+
+    <string name="searchView">Meklēt šeit …</string>
+
+    <string name="PlasticToDoRules">    PET pudeles, trauciņi, kastītes
+    LDPE plēves un maisiņi
+    HDPE plastmasas iepakojums
+    </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="zaao">ZAAO</string>
+    <string name="cleanr">CleanR</string>
+    <string name="lzp">Latvijas Zaļais Punkts</string>
+
+    <string name="preference_name">PREFERENCE</string>
 
 </resources>

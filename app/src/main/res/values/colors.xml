@@ -8,9 +8,19 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="teal">#94028F82</color>
+    <color name="teal">#E1009688</color>
     <color name="leaf">#98cb00</color>
     <color name="purple_300">#FFBD3FD3</color>
     <color name="blue">#7ebedc</color>
     <color name="dark_green">#073A09</color>
+    <color name="dark_grey">#121215</color>
+    <color name="grey">#FF676767</color>
+    <color name="paleblue">#FFC4E4DB</color>
+
+    <color name="yellow_button">#FEDD2C</color>
+    <color name="green_button">#00AB08</color>
+    <color name="blue_button">#5360BE</color>
+    <color name="black_button">#363337</color>
+    <color name="brown_button">#62370A</color>
+    <color name="red_button">#DA0200</color>
 </resources>

@@ -2,12 +2,15 @@ package com.example.ecoassistant
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.ecoassistant.databinding.ActivitySignInBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
-class SignInActivity: AppCompatActivity() {
+class SignInActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySignInBinding
     private lateinit var firebaseAuth: FirebaseAuth
@@ -17,7 +20,7 @@ class SignInActivity: AppCompatActivity() {
         binding = ActivitySignInBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        firebaseAuth = FirebaseAuth.getInstance()
+        firebaseAuth = Firebase.auth
 
         binding.SignUpView.setOnClickListener {
             val intent = Intent(this, SignUpActivity::class.java)
@@ -29,28 +32,40 @@ class SignInActivity: AppCompatActivity() {
             val pass = binding.password.text.toString()
 
             if (email.isNotEmpty() && pass.isNotEmpty()) {
-
-                firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener {
-                    if (it.isSuccessful) {
-                        val intent = Intent(this, MainActivity::class.java)
-                        startActivity(intent)
-                    } else {
-                        Toast.makeText(this, "Nepareizs e-pasts vai parole!", Toast.LENGTH_SHORT).show()
+                firebaseAuth.signInWithEmailAndPassword(email, pass)
+                    .addOnCompleteListener(this) { task ->
+                        if (task.isSuccessful) {
+                            Log.d(TAG, "signInWithEmail:success")
+                            val intent = Intent(this, MainActivity::class.java)
+                            startActivity(intent)
+                        } else {
+                            Log.w(TAG, "signInWithEmail:failure", task.exception)
+                            Toast.makeText(
+                                baseContext,
+                                "Nepareizs e-pasts vai parole!",
+                                Toast.LENGTH_SHORT,
+                            ).show()
+                        }
                     }
-                }
             } else {
                 Toast.makeText(this, "Tukši lauki nav atļauti!", Toast.LENGTH_SHORT).show()
             }
         }
+
     }
+
     override fun onStart() {
         super.onStart()
-
-        if(firebaseAuth.currentUser != null){
+        if (firebaseAuth.currentUser != null) {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }
+
+    companion object {
+        private const val TAG = "EmailPassword"
+    }
+
 
     /* Action Bar hiding
     override fun onResume() {

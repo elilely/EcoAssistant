@@ -3,10 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".StartActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageViewEarth"
         android:layout_width="725dp"
         android:layout_height="785dp"
         android:layout_marginBottom="-32dp"
@@ -16,23 +17,23 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.529"
+        app:layout_constraintVertical_bias="0.5"
         app:srcCompat="@drawable/green_earth" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/SignInButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="150dp"
         android:background="@drawable/button_round"
-        android:onClick="onClick"
-        android:text="  Autorizācija  "
+        android:text="@string/auth"
         android:textColor="@color/white"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textStyle="bold"
+        android:padding="10dp"
         app:layout_constraintBottom_toTopOf="@+id/SignUpButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -40,18 +41,18 @@
         android:id="@+id/SignUpButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/button_round_transparent"
-        android:onClick="onClick"
-        android:text="  Reģistrācija  "
+        android:padding="10dp"
+        android:text="@string/regis"
         android:textColor="@color/purple_300"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewEarth"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SignInButton"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/SignInButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

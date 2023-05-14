@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="6dp"
+    app:cardUseCompatPadding="true"
+    tools:context=".ShowRulesActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutShow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:background="@color/paleblue"
+                android:fontFamily="@font/quicksand_medium"
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textColor="@color/teal_700"
+                android:textSize="28sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvDrikstTitle"
+                style="@style/ShowRulesTitles"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvName"
+                android:text="Drikst: " />
+
+            <TextView
+                android:id="@+id/tvDrikst"
+                style="@style/ShowRulesText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvDrikstTitle"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/tvNedrikstTitle"
+                style="@style/ShowRulesTitles"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvDrikst"
+                android:text="Nedrikst: " />
+
+            <TextView
+                android:id="@+id/tvNedrikst"
+                style="@style/ShowRulesText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:layout_below="@+id/tvNedrikstTitle" />
+
+            <TextView
+                android:id="@+id/tvKonteinersTitle"
+                style="@style/ShowRulesTitles"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Konteiners: "
+                android:layout_below="@+id/tvNedrikst" />
+
+            <TextView
+                android:id="@+id/tvKonteiners"
+                style="@style/ShowRulesText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:layout_below="@+id/tvKonteinersTitle" />
+
+            <TextView
+                android:id="@+id/tvNoderidiMaksaTitle"
+                style="@style/ShowRulesTitles"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Noderīgi: "
+                android:layout_below="@+id/tvKonteiners" />
+
+            <TextView
+                android:id="@+id/tvNoderidiMaksa"
+                style="@style/ShowRulesText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:layout_below="@+id/tvNoderidiMaksaTitle"
+                android:paddingBottom="30dp"/>
+        </RelativeLayout>
+    </ScrollView>
+
+</androidx.cardview.widget.CardView>
