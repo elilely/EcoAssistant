@@ -31,7 +31,8 @@ class GuideFragment : Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding1 = FragmentGuideBinding.inflate(inflater, container, false)
@@ -69,11 +70,13 @@ class GuideFragment : Fragment() {
                         dataClass.der = newTextDer
 
                         val textNeder = dataClass.neder?.split(";")?.joinToString("\n")
-                        val newTextNeder = textNeder?.replace(Regex("^", RegexOption.MULTILINE), "• ")
+                        val newTextNeder =
+                            textNeder?.replace(Regex("^", RegexOption.MULTILINE), "• ")
                         dataClass.neder = newTextNeder
 
                         val textSagatavo = dataClass.sagatavo?.split(";")?.joinToString("\n")
-                        val newTextSagatavo = textSagatavo?.replace(Regex("^", RegexOption.MULTILINE), "• ")
+                        val newTextSagatavo =
+                            textSagatavo?.replace(Regex("^", RegexOption.MULTILINE), "• ")
                         dataClass.sagatavo = newTextSagatavo
 
                         categoriesList.add(dataClass)
@@ -88,7 +91,7 @@ class GuideFragment : Fragment() {
             }
         })
 
-        categoriesAdapter.setOnItemClickListener(object : CategoriesAdapter.OnItemClickListener{
+        categoriesAdapter.setOnItemClickListener(object : CategoriesAdapter.OnItemClickListener {
             override fun onItemClick(position: Int) {
                 var dataClass = DataClass()
                 dataClass = completeList[position]

@@ -56,7 +56,7 @@ class Database : AppCompatActivity() {
             storageReference.putFile(uri!!).addOnSuccessListener { taskSnapshot ->
                 val uriTask = taskSnapshot.storage.downloadUrl
                 while(!uriTask.isComplete);
-                    val urlImage = uriTask.result
+                val urlImage = uriTask.result
                 imageURL = urlImage.toString()
             }.addOnFailureListener {
                 Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show()

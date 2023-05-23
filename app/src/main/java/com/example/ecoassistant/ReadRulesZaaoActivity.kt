@@ -71,7 +71,7 @@ class ReadRulesZaaoActivity : AppCompatActivity() {
                 intent.putExtra("konteiners", dataClass.konteiners)
                 intent.putExtra("noderigi", dataClass.maksa)
                 val bundle = Bundle()
-                bundle.putString("maksaTitle", "Maksa")
+                bundle.putString("maksaTitle", "Maksa: ")
                 intent.putExtras(bundle)
                 startActivity(intent)
             }

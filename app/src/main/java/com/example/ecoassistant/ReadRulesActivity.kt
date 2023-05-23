@@ -81,6 +81,9 @@ class ReadRulesActivity : AppCompatActivity() {
                 intent.putExtra("nedrikst", dataClass.nedrikst)
                 intent.putExtra("konteiners", dataClass.konteiners)
                 intent.putExtra("noderigi", dataClass.noderigi)
+                val bundle = Bundle()
+                bundle.putString("maksaTitle", "Noderīgi: ")
+                intent.putExtras(bundle)
                 startActivity(intent)
             }
         })

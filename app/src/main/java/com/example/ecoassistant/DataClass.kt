@@ -8,6 +8,7 @@ class DataClass {
     var parstrade: String? = null
     var image: String? = null
 
+
     constructor(name: String?, der: String?, neder: String?, sagatavo: String?, parstrade: String?, image: String?){
         this.name = name
         this.der = der
