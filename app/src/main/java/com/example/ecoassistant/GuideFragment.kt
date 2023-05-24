@@ -7,11 +7,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ecoassistant.databinding.FragmentGuideBinding
 import com.google.firebase.database.*
+import java.util.Locale
 import kotlin.collections.ArrayList
 
 class GuideFragment : Fragment() {
@@ -105,6 +107,34 @@ class GuideFragment : Fragment() {
                 startActivity(intent)
             }
         })
+
+        binding2.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                filterList(newText)
+                return true
+            }
+
+        })
+    }
+
+    fun filterList(query: String?) {
+        if (query != null) {
+            val filteredList = ArrayList<DataClass>()
+            for (i in categoriesList) {
+                if (i.name?.lowercase(Locale.ROOT)?.contains(query) == true) {
+                    filteredList.add(i)
+                }
+            }
+            if (filteredList.isEmpty()) {
+                Toast.makeText(context, "Dati nav atrasti", Toast.LENGTH_SHORT).show()
+            } else {
+                categoriesAdapter.setFilteredList(filteredList)
+            }
+        }
     }
 }
 

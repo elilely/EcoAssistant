@@ -29,21 +29,22 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="28dp"
+        android:textColorHint="@color/grey"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/blue"
         app:layout_constraintBottom_toTopOf="@+id/passwordLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RectangleAuth"
-        app:boxBackgroundColor="@color/white"
-        app:boxStrokeColor="@color/blue"
-        android:textColorHint="@color/grey">
+        app:layout_constraintTop_toBottomOf="@+id/RectangleAuth">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/email"
             style="@style/TextInputInnerFieldStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:hint="@string/your_email"/>
+            android:hint="@string/your_email"
+            android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -53,22 +54,23 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="28dp"
+        android:textColorHint="@color/grey"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailLayout"
-        app:passwordToggleEnabled="true"
         app:passwordToggleDrawable="@drawable/show_password_selector"
-        app:boxBackgroundColor="@color/white"
-        app:boxStrokeColor="@color/blue"
-        android:textColorHint="@color/grey">
+        app:passwordToggleEnabled="true">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/password"
             style="@style/TextInputInnerFieldStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:hint="@string/your_password"/>
+            android:hint="@string/your_password"
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -78,22 +80,23 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="28dp"
+        android:textColorHint="@color/grey"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/blue"
         app:layout_constraintBottom_toTopOf="@+id/MainButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordLayout"
-        app:passwordToggleEnabled="true"
         app:passwordToggleDrawable="@drawable/show_password_selector"
-        app:boxBackgroundColor="@color/white"
-        app:boxStrokeColor="@color/blue"
-        android:textColorHint="@color/grey">
+        app:passwordToggleEnabled="true">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/ConfPassword"
             style="@style/TextInputInnerFieldStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:hint="@string/confirm_your_password"/>
+            android:hint="@string/confirm_your_password"
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
@@ -124,5 +127,15 @@
         app:layout_constraintVertical_bias="0.0"
         tools:layout_editor_absoluteX="-75dp" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/RectangleAuth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/recycle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

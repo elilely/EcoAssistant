@@ -41,11 +41,13 @@ class ReadRulesZaaoActivity : AppCompatActivity() {
                     if (dataClass != null) {
 
                         val textDrikst = dataClass.drikst?.split(";")?.joinToString("\n")
-                        val newTextDer = textDrikst?.replace(Regex("^", RegexOption.MULTILINE), "• ")
+                        val newTextDer =
+                            textDrikst?.replace(Regex("^", RegexOption.MULTILINE), "• ")
                         dataClass.drikst = newTextDer
 
                         val textNedrikst = dataClass.nedrikst?.split(";")?.joinToString("\n")
-                        val newTextNedrikst = textNedrikst?.replace(Regex("^", RegexOption.MULTILINE), "• ")
+                        val newTextNedrikst =
+                            textNedrikst?.replace(Regex("^", RegexOption.MULTILINE), "• ")
                         dataClass.nedrikst = newTextNedrikst
 
                         listData.add(dataClass.name!!)
@@ -60,8 +62,13 @@ class ReadRulesZaaoActivity : AppCompatActivity() {
             }
         })
 
-        listView.setOnItemClickListener(object: AdapterView.OnItemClickListener{
-            override fun onItemClick(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+        listView.setOnItemClickListener(object : AdapterView.OnItemClickListener {
+            override fun onItemClick(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
                 var dataClass = DataClassLZP()
                 dataClass = listCompleteData[position]
                 val intent = Intent(this@ReadRulesZaaoActivity, ShowRulesActivity::class.java)

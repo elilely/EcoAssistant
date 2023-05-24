@@ -13,8 +13,8 @@
         android:background="@color/leaf"
         android:elevation="4dp"
         android:fontFamily="@font/quicksand_medium"
-        android:theme="@style/AppTheme"
         android:textStyle="bold"
+        android:theme="@style/AppTheme"
         tools:ignore="MissingConstraints" />
 
     <ListView

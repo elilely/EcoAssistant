@@ -7,11 +7,12 @@ import android.content.Intent
 import android.os.Handler
 import android.os.Looper
 import android.view.WindowManager
+import com.google.firebase.auth.FirebaseAuth
 
 @SuppressLint("CustomSplashScreen")
 class SplashScreen : AppCompatActivity() {
 
-    private var SPLASH_SCREEN_TIME: Long = 3500
+    private var SPLASH_SCREEN_TIME: Long = 3000
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,19 +21,13 @@ class SplashScreen : AppCompatActivity() {
         setContentView(R.layout.activity_splash_screen)
 
         Handler(Looper.myLooper()!!).postDelayed({
-            startActivity(Intent(this, MainActivity::class.java))
+            val auth = FirebaseAuth.getInstance()
+            if (auth.currentUser != null) {
+                startActivity(Intent(this, MainActivity::class.java))
+            } else {
+                startActivity(Intent(this, StartActivity::class.java))
+            }
             finish()
         }, SPLASH_SCREEN_TIME)
-
-        // we used the postDelayed(Runnable, time) method
-        // to send a message with a delayed time.
-        //Normal Handler is deprecated , so we have to change the code little bit
-
-        // Handler().postDelayed({
-       /* Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-            finish()
-        }, 3000) // 3000 is the delayed time in milliseconds.*/
     }
 }

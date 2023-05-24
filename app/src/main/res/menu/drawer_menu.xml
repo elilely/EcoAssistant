@@ -18,11 +18,6 @@
             android:id="@+id/nav_scanner"
             android:icon="@drawable/scanner"
             android:title="@string/nav_scanner" />
-
-        <item
-            android:id="@+id/talkas"
-            android:icon="@drawable/nature"
-            android:title="@string/talkas" />
     </group>
 
     <item android:title="@string/nav_account">

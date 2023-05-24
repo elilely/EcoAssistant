@@ -24,6 +24,5 @@ class ShowRulesActivity : AppCompatActivity() {
             binding.tvNoderidiMaksaTitle.text = bundle?.getString("maksaTitle")
 
         }
-
     }
 }

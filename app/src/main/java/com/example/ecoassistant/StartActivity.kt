@@ -12,7 +12,6 @@ class StartActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val auth = FirebaseAuth.getInstance()
         if (auth.currentUser != null) {
-            // Пользователь уже авторизован, перенаправляем на главный экран
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         } else {
@@ -20,7 +19,6 @@ class StartActivity : AppCompatActivity() {
                 .getBoolean("isFirstLaunch", true)
 
             if (isFirstLaunch) {
-                // Это первый запуск приложения, отображаем экран выбора регистрации или авторизации
                 setContentView(R.layout.activity_start)
                 getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
                     .putBoolean("isFirstLaunch", false).apply()
@@ -37,7 +35,6 @@ class StartActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
             } else {
-                // Первый запуск уже был, но пользователь не авторизован, поэтому перенаправляем на экран авторизации
                 startActivity(Intent(this, SignInActivity::class.java))
                 finish()
             }

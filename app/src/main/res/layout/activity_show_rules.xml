@@ -30,7 +30,7 @@
                 android:textAlignment="center"
                 android:textColor="@color/teal_700"
                 android:textSize="28sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvDrikstTitle"
@@ -61,42 +61,44 @@
                 style="@style/ShowRulesText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="TextView"
-                android:layout_below="@+id/tvNedrikstTitle" />
+                android:layout_below="@+id/tvNedrikstTitle"
+                android:text="TextView" />
 
             <TextView
                 android:id="@+id/tvKonteinersTitle"
                 style="@style/ShowRulesTitles"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Konteiners: "
-                android:layout_below="@+id/tvNedrikst" />
+                android:layout_below="@+id/tvNedrikst"
+                android:text="Konteiners: " />
 
             <TextView
                 android:id="@+id/tvKonteiners"
                 style="@style/ShowRulesText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="TextView"
-                android:layout_below="@+id/tvKonteinersTitle" />
+                android:layout_below="@+id/tvKonteinersTitle"
+                android:text="TextView" />
 
             <TextView
                 android:id="@+id/tvNoderidiMaksaTitle"
                 style="@style/ShowRulesTitles"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Noderīgi: "
-                android:layout_below="@+id/tvKonteiners" />
+                android:layout_below="@+id/tvKonteiners"
+                android:text="Noderīgi: " />
 
             <TextView
                 android:id="@+id/tvNoderidiMaksa"
                 style="@style/ShowRulesText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="TextView"
                 android:layout_below="@+id/tvNoderidiMaksaTitle"
-                android:paddingBottom="30dp"/>
+                android:paddingBottom="30dp"
+                android:text="TextView" />
+
         </RelativeLayout>
+
     </ScrollView>
 
 </androidx.cardview.widget.CardView>

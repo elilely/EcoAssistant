@@ -6,9 +6,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.result.ActivityResult
-import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.ecoassistant.databinding.DatabaseBinding
 import com.google.firebase.database.DatabaseReference
@@ -32,16 +30,16 @@ class Database : AppCompatActivity() {
 
         val activityResultLauncher = registerForActivityResult<Intent, ActivityResult>(
             ActivityResultContracts.StartActivityForResult()
-        ){result ->
-            if (result.resultCode == RESULT_OK){
+        ) { result ->
+            if (result.resultCode == RESULT_OK) {
                 val data = result.data
                 uri = data!!.data
                 binding.uploadImage.setImageURI(uri)
-            }else{
+            } else {
                 Toast.makeText(this, "No Image Selected", Toast.LENGTH_SHORT).show()
             }
         }
-        binding.uploadImage.setOnClickListener{
+        binding.uploadImage.setOnClickListener {
             val photoPicker = Intent(Intent.ACTION_PICK)
             photoPicker.type = "image/*"
             activityResultLauncher.launch(photoPicker)
@@ -49,13 +47,12 @@ class Database : AppCompatActivity() {
 
         binding.buttonSave.setOnClickListener {
 
-            val storageReference = FirebaseStorage.getInstance().reference.child("Images").child(uri!!.lastPathSegment!!)
-            //val builder = AlertDialog.Builder(this)
-            //builder.setCancelable(false)
+            val storageReference = FirebaseStorage.getInstance().reference.child("Images")
+                .child(uri!!.lastPathSegment!!)
 
             storageReference.putFile(uri!!).addOnSuccessListener { taskSnapshot ->
                 val uriTask = taskSnapshot.storage.downloadUrl
-                while(!uriTask.isComplete);
+                while (!uriTask.isComplete);
                 val urlImage = uriTask.result
                 imageURL = urlImage.toString()
             }.addOnFailureListener {

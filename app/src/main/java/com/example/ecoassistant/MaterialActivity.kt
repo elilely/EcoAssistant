@@ -4,15 +4,12 @@ package com.example.ecoassistant
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ArrayAdapter
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.example.ecoassistant.databinding.ActivityMaterialBinding
 
 class MaterialActivity : AppCompatActivity() {
 
-    private lateinit var adapter: ArrayAdapter<String>
-    private lateinit var listData: List<String>
     private lateinit var binding: ActivityMaterialBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {

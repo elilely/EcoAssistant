@@ -7,7 +7,6 @@
     android:background="?attr/colorOnPrimary"
     tools:context=".SignInActivity">
 
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailLayout"
         style="@style/TextInputOuterFieldStyle"
@@ -40,22 +39,23 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="24dp"
+        android:textColorHint="@color/grey"
+        app:boxBackgroundColor="@color/white"
+        app:boxStrokeColor="@color/blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailLayout"
-        app:passwordToggleEnabled="true"
         app:passwordToggleDrawable="@drawable/show_password_selector"
-        app:boxBackgroundColor="@color/white"
-        app:boxStrokeColor="@color/blue"
-        android:textColorHint="@color/grey">
+        app:passwordToggleEnabled="true">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/password"
             style="@style/TextInputInnerFieldStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:hint="@string/your_password"/>
+            android:hint="@string/your_password"
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatButton
@@ -92,21 +92,18 @@
         android:id="@+id/RectangleAuth"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="150dp"
         android:layout_marginBottom="22dp"
+        android:contentDescription="@string/desc"
         app:layout_constraintBottom_toTopOf="@+id/emailLayout"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/rectangle_auth"
-        android:contentDescription="@string/desc"/>
+        app:srcCompat="@drawable/rectangle_auth" />
 
     <TextView
         android:id="@+id/textViewAuth"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginTop="130dp"
-        android:layout_marginBottom="22dp"
+        android:layout_height="0dp"
         android:fontFamily="sans-serif-medium"
         android:shadowColor="#C4E4DB"
         android:text="@string/auth_lowerCase"
@@ -115,8 +112,17 @@
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/emailLayout"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/RectangleAuth" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/RectangleAuth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/recycle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

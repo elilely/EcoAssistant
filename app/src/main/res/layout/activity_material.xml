@@ -50,19 +50,6 @@
                 app:layout_constraintStart_toStartOf="@+id/materialImage"
                 app:layout_constraintTop_toTopOf="parent" />
 
-
-            <!-- <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerViewCompanies"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/canTitle"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="0dp"
-                app:layout_constraintHorizontal_bias="0.5"
-                tools:listitem="@layout/activity_companies" /> -->
-
             <TextView
                 android:id="@+id/textDerTitle"
                 android:layout_width="wrap_content"
@@ -193,8 +180,8 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="30dp"
                 android:background="@color/paleblue"
-                android:text="Izvēlies uzņēmumu, lai uzzinātu tieši viņu noteikumus!"
                 android:fontFamily="@font/quicksand_medium"
+                android:text="Izvēlies uzņēmumu, lai uzzinātu tieši viņu noteikumus!"
                 android:textAlignment="center"
                 android:textColor="@color/teal_700"
                 android:textSize="20sp"
@@ -204,52 +191,51 @@
                 android:id="@+id/buttonLZP"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Latvijas Zaļais Punkts"
-                android:backgroundTint="@color/blue"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:textAllCaps="false"
                 android:layout_below="@+id/textAboutButtons"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="30dp"
-                android:layout_marginEnd="10dp"/>
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/blue"
+                android:text="Latvijas Zaļais Punkts"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/buttonCleanR"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="CleanR"
-                android:backgroundTint="@color/blue"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:textAllCaps="false"
                 android:layout_below="@+id/buttonLZP"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginEnd="10dp"/>
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/blue"
+                android:text="CleanR"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/buttonZaao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ZAAO"
-                android:backgroundTint="@color/blue"
-                android:textSize="24sp"
-                android:textStyle="bold"
                 android:layout_below="@+id/buttonCleanR"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginEnd="10dp"/>
-
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/blue"
+                android:text="ZAAO"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
         </RelativeLayout>
-    </ScrollView>
 
+    </ScrollView>
 
 </androidx.cardview.widget.CardView>

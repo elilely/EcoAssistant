@@ -23,6 +23,7 @@
             android:background="@color/leaf"
             android:elevation="4dp"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@color/white"
             tools:ignore="MissingConstraints" />
 
         <FrameLayout
@@ -45,6 +46,5 @@
         app:headerLayout="@layout/activity_nav_header"
         app:menu="@menu/drawer_menu"
         tools:ignore="MissingConstraints" />
-
 
 </androidx.drawerlayout.widget.DrawerLayout>

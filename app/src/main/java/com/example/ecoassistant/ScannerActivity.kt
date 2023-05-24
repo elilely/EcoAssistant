@@ -9,11 +9,9 @@ import androidx.core.content.ContextCompat
 import android.widget.Toast
 import com.example.ecoassistant.databinding.ActivityScannerBinding
 import com.google.firebase.database.*
-import android.widget.Button
 import androidx.activity.result.ActivityResultLauncher
 import com.journeyapps.barcodescanner.ScanContract
 import com.journeyapps.barcodescanner.ScanOptions
-
 
 class ScannerActivity : AppCompatActivity() {
 

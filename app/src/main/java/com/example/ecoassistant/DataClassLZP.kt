@@ -8,7 +8,14 @@ class DataClassLZP {
     var noderigi: String? = null
     var maksa: String? = null
 
-    constructor(name: String?, drikst: String?, nedrikst: String?, konteiners: String?, noderigi: String?, maksa: String?){
+    constructor(
+        name: String?,
+        drikst: String?,
+        nedrikst: String?,
+        konteiners: String?,
+        noderigi: String?,
+        maksa: String?
+    ) {
         this.name = name
         this.drikst = drikst
         this.nedrikst = nedrikst
@@ -16,5 +23,6 @@ class DataClassLZP {
         this.noderigi = noderigi
         this.maksa = maksa
     }
+
     constructor()
 }

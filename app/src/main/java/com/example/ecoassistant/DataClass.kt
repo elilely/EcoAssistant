@@ -9,7 +9,14 @@ class DataClass {
     var image: String? = null
 
 
-    constructor(name: String?, der: String?, neder: String?, sagatavo: String?, parstrade: String?, image: String?){
+    constructor(
+        name: String?,
+        der: String?,
+        neder: String?,
+        sagatavo: String?,
+        parstrade: String?,
+        image: String?
+    ) {
         this.name = name
         this.der = der
         this.neder = neder
@@ -17,6 +24,7 @@ class DataClass {
         this.parstrade = parstrade
         this.image = image
     }
+
     constructor()
 
 }

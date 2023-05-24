@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="176dp"
     android:background="@color/leaf"
     android:gravity="bottom"
+    android:orientation="vertical"
     android:padding="16dp">
-
-    <ImageView
-        android:id="@+id/account_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/quicksand_medium"
         android:paddingTop="8dp"
-        android:text="@string/app_name_lv"
-        android:textSize="20sp"
+        android:text="Esiet sveicināts ECO asistentā!"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/quicksand_medium"
+        android:paddingTop="8dp"
+        android:text="Izvēlieties funkciju zemāk, lai atrastu nepieciešamo informāciju!"
+        android:textColor="@color/blue_button"
+        android:textSize="16sp"
         android:textStyle="bold" />
 
 </LinearLayout>

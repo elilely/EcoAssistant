@@ -8,11 +8,4 @@ class BarcodeDataClass(
     var depozits: String? = null
 ) {
 
-    //constructor(id: String?, materials: String?, konteiners: String?, depozits: String?){
-    //        this.id = id
-    //        this.materials = materials
-    //        this.konteiners = konteiners
-     //       this.depozits = depozits
-     //   }
-
 }

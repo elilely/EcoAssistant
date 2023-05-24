@@ -53,5 +53,17 @@
     <string name="lzp">Latvijas Zaļais Punkts</string>
 
     <string name="preference_name">PREFERENCE</string>
+    <string name="title_activity_maps">MapsActivity</string>
+
+    <string name="scanner_rules">
+        <![CDATA[
+        Skenējot svītrkodu no iepakojuma, Skeneris palīdzēs:\n
+        <ul style="list-style-type: disc;">
+            <li> noteikt iepakojuma materiālu;</li>
+            <li> kuri konteineri ir piemēroti šī materiāla šķirošanai;</li>
+            <li> plastmasas pudeļu gadījumā parādīs, vai to var nodot depozītā sistēma.</li>
+        </ul>
+    ]]>
+    </string>
 
 </resources>

@@ -65,12 +65,4 @@ class SignInActivity : AppCompatActivity() {
     companion object {
         private const val TAG = "EmailPassword"
     }
-
-
-    /* Action Bar hiding
-    override fun onResume() {
-        super.onResume()
-        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
-        actionBar?.hide()
-    }*/
 }

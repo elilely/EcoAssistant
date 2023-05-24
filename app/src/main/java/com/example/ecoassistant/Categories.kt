@@ -3,18 +3,14 @@ package com.example.ecoassistant
 import android.os.Parcel
 import android.os.Parcelable
 
-data class Categories( var materialName: String):Parcelable {//, val imageMaterial: Int, val toDoRules:String
+data class Categories(var materialName: String) : Parcelable {
     constructor(parcel: Parcel) : this(
-        parcel.readString()!!,
-        //parcel.readInt(),
-        //parcel.readString()!!
+        parcel.readString()!!
     ) {
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(materialName)
-        //parcel.writeInt(imageMaterial)
-        //parcel.writeString(toDoRules)
     }
 
     override fun describeContents(): Int {
