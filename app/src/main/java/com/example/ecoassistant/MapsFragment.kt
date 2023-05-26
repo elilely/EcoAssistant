@@ -27,11 +27,13 @@ import com.google.firebase.database.*
 class MapsFragment : Fragment() {
 
     private val TAG = "MapsFragment"
+    private val LOCATION_PERMISSION_REQUEST_CODE = 123
 
     private lateinit var googleMap: GoogleMap
     private lateinit var database: FirebaseDatabase
     private lateinit var markersReference: DatabaseReference
     private lateinit var fusedLocationClient: FusedLocationProviderClient
+
 
     private lateinit var markerList: MutableList<MarkerOptions>
 
@@ -90,7 +92,6 @@ class MapsFragment : Fragment() {
                         "EKO laukums" -> BitmapDescriptorFactory.defaultMarker(
                             BitmapDescriptorFactory.HUE_VIOLET
                         )
-
                         "Stikls" -> BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)
                         "Plastmasa, metāls, papīrs" -> BitmapDescriptorFactory.defaultMarker(
                             BitmapDescriptorFactory.HUE_YELLOW
@@ -114,38 +115,9 @@ class MapsFragment : Fragment() {
                         Manifest.permission.ACCESS_FINE_LOCATION
                     ) == PackageManager.PERMISSION_GRANTED
                 ) {
-                    fusedLocationClient.lastLocation.addOnSuccessListener { location: Location? ->
-                        location?.let {
-                            val currentLatLng = LatLng(it.latitude, it.longitude)
-                            googleMap.moveCamera(
-                                CameraUpdateFactory.newLatLngZoom(
-                                    currentLatLng,
-                                    12f
-                                )
-                            )
-                        }
-                            ?: run {
-                                if (markerList.isNotEmpty()) {
-                                    val firstMarker = markerList[0]
-                                    googleMap.moveCamera(
-                                        CameraUpdateFactory.newLatLngZoom(
-                                            firstMarker.position,
-                                            12f
-                                        )
-                                    )
-                                }
-                            }
-                    }
+                    moveCameraToCurrentLocation()
                 } else {
-                    if (markerList.isNotEmpty()) {
-                        val firstMarker = markerList[0]
-                        googleMap.moveCamera(
-                            CameraUpdateFactory.newLatLngZoom(
-                                firstMarker.position,
-                                12f
-                            )
-                        )
-                    }
+                    requestLocationPermission()
                 }
             }
 
@@ -170,5 +142,67 @@ class MapsFragment : Fragment() {
 
         val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment?
         mapFragment?.getMapAsync(callback)
+    }
+
+    private fun requestLocationPermission() {
+        if (ActivityCompat.shouldShowRequestPermissionRationale(
+                requireActivity(),
+                Manifest.permission.ACCESS_FINE_LOCATION
+            )
+        ) {
+            ActivityCompat.requestPermissions(
+                requireActivity(),
+                arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
+                LOCATION_PERMISSION_REQUEST_CODE
+            )
+        } else {
+            ActivityCompat.requestPermissions(
+                requireActivity(),
+                arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
+                LOCATION_PERMISSION_REQUEST_CODE
+            )
+        }
+    }
+
+    @Deprecated("Deprecated in Java")
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (requestCode == LOCATION_PERMISSION_REQUEST_CODE) {
+            if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                moveCameraToCurrentLocation()
+            }
+        }
+    }
+
+    private fun moveCameraToCurrentLocation() {
+        try {
+            fusedLocationClient.lastLocation.addOnSuccessListener { location: Location? ->
+                location?.let {
+                    val currentLatLng = LatLng(it.latitude, it.longitude)
+                    googleMap.moveCamera(
+                        CameraUpdateFactory.newLatLngZoom(
+                            currentLatLng,
+                            12f
+                        )
+                    )
+                } ?: run {
+                    if (markerList.isNotEmpty()) {
+                        val firstMarker = markerList[0]
+                        googleMap.moveCamera(
+                            CameraUpdateFactory.newLatLngZoom(
+                                firstMarker.position,
+                                12f
+                            )
+                        )
+                    }
+                }
+            }
+        } catch (e: SecurityException) {
+            Log.e(TAG, "SecurityException: ${e.message}")
+        }
     }
 }

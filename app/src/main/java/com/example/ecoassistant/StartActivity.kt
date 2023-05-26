@@ -11,6 +11,7 @@ class StartActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val auth = FirebaseAuth.getInstance()
+
         if (auth.currentUser != null) {
             startActivity(Intent(this, MainActivity::class.java))
             finish()
@@ -22,8 +23,8 @@ class StartActivity : AppCompatActivity() {
                 setContentView(R.layout.activity_start)
                 getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
                     .putBoolean("isFirstLaunch", false).apply()
-                val signInButton: Button = findViewById(R.id.SignInButton)
 
+                val signInButton: Button = findViewById(R.id.SignInButton)
                 signInButton.setOnClickListener {
                     val intent = Intent(this, SignInActivity::class.java)
                     startActivity(intent)
