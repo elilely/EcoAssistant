@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import androidx.appcompat.widget.Toolbar
 import com.google.firebase.database.*
 
 class ReadRulesZaaoActivity : AppCompatActivity() {
@@ -22,6 +23,13 @@ class ReadRulesZaaoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_read_rules)
+
+        val toolbar: Toolbar = findViewById(R.id.toolbarRR_LZP)
+        setSupportActionBar(toolbar)
+
+        supportActionBar?.apply {
+            title = "ZAAO"
+        }
 
         listView = findViewById(R.id.listView)
         listData = ArrayList()

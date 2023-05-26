@@ -23,7 +23,6 @@ class GuideFragment : Fragment() {
 
     private lateinit var categoriesAdapter: CategoriesAdapter
     private lateinit var recyclerView: RecyclerView
-    private lateinit var searchView: SearchView
     private var categoriesList = ArrayList<DataClass>()
     private var completeList = ArrayList<DataClass>()
     var databaseReference: DatabaseReference? = null
